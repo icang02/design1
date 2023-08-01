@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="dist/style.css" />
+    <!-- font roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/3b062932e2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-br from-[#3e8d95] to-[#25585e] font-[roboto]"
+  >
+    <!-- section utama -->
+    <div class="container mx-auto">
+      <!-- navbar -->
+      <header
+        class="flex px-4 py-4 lg:px-0 lg:py-6 text-white justify-between items-center lg:items-end"
+      >
+        <div class="font-medium text-2xl">Power Shoes</div>
+        <ul
+          id="ulMenu"
+          class="transition-all duration-300 absolute lg:relative -left-[50%] lg:left-0 top-0 bottom-0 z-10 flex flex-col lg:flex-row space-y-6 lg:space-y-0 w-1/2 lg:w-auto p-6 lg:p-0 text-center lg:text-start bg-white lg:bg-transparent lg:flex lg:items-center lg:space-x-14"
+        >
+          <li>
+            <a
+              href=""
+              class="text-slate-600 lg:text-slate-100 transition-all hover:text-black lg:hover:text-white w-full block"
+              >Collections</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="text-slate-600 lg:text-slate-100 transition-all hover:text-black lg:hover:text-white w-full block"
+              >Discount</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="text-slate-600 lg:text-slate-100 transition-all hover:text-black lg:hover:text-white w-full block"
+              >About</a
+            >
+          </li>
+          <li class="lg:hover:translate-x-2 transition-all duration-300">
+            <a
+              href=""
+              class="text-[#3e8d95] transition-all bg-white px-5 py-2 rounded-lg w-full block"
+              ><span>Cart</span> <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
+        </ul>
+
+        <div class="lg:hidden cursor-pointer" id="menu">
+          <i class="fa-solid fa-bars fa-xl" id="iconMenu"></i>
+        </div>
+      </header>
+
+      <!-- hero -->
+      <section
+        class="px-4 lg:px-0 min-h-[89vh] flex items-center justify-between text-white"
+      >
+        <div class="w-auto">
+          <div class="relative">
+            <h1 class="text-8xl lg:text-9xl font-[poppins] font-bold max-w-lg">
+              Make Fly
+            </h1>
+            <p class="mt-12 max-w-xl text-sm text-center lg:text-left">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
+              qui magni vitae hic quas assumenda molestias, at saepe itaque
+              distinctio.
+            </p>
+            <h1
+              class="absolute text-[120px] lg:text-[200px] font-[poppins] font-bold bottom-10 lg:-bottom-6 opacity-5 right-0"
+            >
+              New
+            </h1>
+          </div>
+          <h3 class="text-center lg:text-left text-2xl lg:text-3xl mt-6">
+            $399
+          </h3>
+          <div class="mx-auto flex justify-center">
+            <a
+              href="#"
+              class="text-lg lg:text-xl text-[#3e8d95] bg-white px-6 py-1 lg:px-8 lg:py-2 rounded-lg inline-block mt-4 lg:mt-2"
+              >Buy Now</a
+            >
+          </div>
+          <div
+            class="flex justify-center lg:justify-start items-center space-x-5 text-xl mt-8"
+          >
+            <a href="" class="inline-block">
+              <!-- <i class="fa-brands fa-instagram"></i> -->
+              <i class="fa-brands fa-instagram fa-xl"></i>
+            </a>
+            <a href="" class="inline-block">
+              <i class="fa-brands fa-square-facebook fa-xl"></i>
+            </a>
+            <div class="bg-white h-1 w-[100%] hidden lg:block"></div>
+          </div>
+          <div class="mt-6 bg-white h-0.5 w-[100%] lg:hidden"></div>
+        </div>
+
+        <div class="w-[50%] hidden lg:block">
+          <img src="./src//img/shoes.png" class="" />
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const menu = document.getElementById("menu");
+      const ulMenu = document.getElementById("ulMenu");
+      const iconMenu = document.getElementById("iconMenu");
+
+      menu.addEventListener("click", () => {
+        ulMenu.classList.toggle("-left-[50%]");
+        ulMenu.classList.toggle("-left-0");
+
+        iconMenu.classList.toggle("fa-bars");
+        iconMenu.classList.toggle("fa-x");
+      });
+    </script>
+  </body>
+</html>
